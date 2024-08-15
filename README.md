@@ -30,4 +30,8 @@ docker build -t meu-jupyter .
 docker run -p 8888:8888 -v $(pwd):/app meu-jupyter
 ```
 
+### Sobre a Disciplina
+
+A disciplina de **Sinais e Sistemas** aborda os conceitos fundamentais de sinais contínuos e discretos, sistemas lineares invariantes no tempo, transformadas de Fourier, entre outros tópicos. Os notebooks deste repositório complementam o conteúdo teórico com exemplos práticos e exercícios.
+
 
