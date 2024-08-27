@@ -1,5 +1,5 @@
 # Etapa 1: Build (instalação das dependências)
-FROM python:3.8-slim as build
+FROM python:3.12.5-slim-bookworm as build
 
 # Defina o diretório de trabalho para /app
 WORKDIR /app
@@ -14,13 +14,13 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --no-cache-dir jupyter
 
 # Etapa 2: Final (imagem final)
-FROM python:3.8-slim
+FROM python:3.12.5-slim-bookworm
 
 # Defina o diretório de trabalho para /app
 WORKDIR /app
 
 # Copie as dependências e os binários necessários da etapa de build
-COPY --from=build /usr/local/lib/python3.8/site-packages /usr/local/lib/python3.8/site-packages
+COPY --from=build /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
 COPY --from=build /usr/local/bin/ /usr/local/bin/
 
 # Exponha a porta 8888
