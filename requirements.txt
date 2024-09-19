@@ -3,3 +3,8 @@ pandas
 matplotlib
 scikit-learn
 scipy
+IPython
+jupyter_tikz
+ipywidgets
+requests
+pydev
